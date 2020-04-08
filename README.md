@@ -7,7 +7,7 @@
 </p>
 <div align= "center">
 
-  [*About The Project*](#About-The-Project) | [*The Team*](#The-Team) | [*Getting Started*](#Getting-Started) | [*Running The Program*](#Running-The-Program) | [*License*](#license)
+  [*About The Project*](#About-The-Project) | [*The Team*](#The-Team) | [*Getting Started*](#Getting-Started) | [*Running The Program*](#Running-The-Program) | [*Back End*](#The-Back-End) [*License*](#license)
 
 </div>
 
@@ -23,8 +23,6 @@ The parameters used to render the visuals on screen include;
 - Danceability - which determines the number of circles on screen
 - Song Energy - which determines the speed of the circles
 - Valence (or positivity) - which creates a randomised seed of circle size
-
-
 
 ## The Team
 
@@ -69,9 +67,13 @@ $ npm start
 
 4. Enjoy!
 
-Please also follow directions for running the back end server, found in the [Back-End-Vishual](https://github.com/acmerlino1/Back-End-Vishual) README.
+## The Back End
 
-In the Back-End directory, you can run: node authorizationcode/app.js to allow authorisation through Spotify's OAuth.
+WARNING!
+
+The project will not run without the Node.JS server running in another terminal window we would suggest running that directory first before running NPM start.
+
+For directions on running the back end server please visit that portion of the project found [here](https://github.com/Walker-TW/Back-End-Vishual).
 
 ## License
 
