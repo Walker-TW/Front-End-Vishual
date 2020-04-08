@@ -23,7 +23,7 @@
 
 ## About The Project
 
-[product-screenshot](./public/images/Screentshot.png?raw=true)
+[product-screenshot](/public/images/Screentshot.png?raw=true)
 
 A single page web app music visualiser that respondes to data returns by the Spotify API. The song key affects the colour, the danceability determines the number of circles on the screen and the song enery determines the speed of the visualiser.
 
