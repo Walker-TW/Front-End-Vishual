@@ -7,7 +7,7 @@
 </p>
 <div align= "center">
 
-  [*About The Project*](#About-The-Project) | [*The Team*](#The-Team) | [*Getting Started*](#Getting-Started) | [*Running The Program*](#Running-The-Program) | [*Back End*](#The-Back-End) [*License*](#license)
+  [*About The Project*](#About-The-Project) | [*The Team*](#The-Team) | [*Getting Started*](#Getting-Started) | [*Running The Program*](#Running-The-Program) | [*Back End*](#The-Back-End) | [*License*](#license)
 
 </div>
 
