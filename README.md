@@ -1,4 +1,25 @@
-# The Vishual project
+
+<br />
+<p align="center">
+  <h3 align="center">The Vishual Project</h3>
+
+  <p align="center">
+    A single page web app music visualiser that respondes to data returns by the Spotify API.
+    <br />
+    <a href="https://github.com/Walker-TW/Front-End-Vishual"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/Walker-TW/Front-End-Vishual">View Demo</a>
+    ·
+    <a href="https://github.com/Walker-TW/Front-End-Vishual/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Walker-TW/Front-End-Vishual/issues">Request Feature</a>
+  </p>
+</p>
+
+## About The Project
+
+![product-screenshot](/public/images/Screentshot.png?raw=true)
 
 A single page web app music visualiser that respondes to data returns by the Spotify API. The song key affects the colour, the danceability determines the number of circles on the screen and the song enery determines the speed of the visualiser.
 
