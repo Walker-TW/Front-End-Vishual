@@ -5,17 +5,13 @@
 
   <p align="center">
     A single page web app music visualiser that respondes to data returns by the Spotify API.
-    <br />
-    <a href="https://github.com/Walker-TW/Front-End-Vishual"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/Walker-TW/Front-End-Vishual">View Demo</a>
-    ·
-    <a href="https://github.com/Walker-TW/Front-End-Vishual/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Walker-TW/Front-End-Vishual/issues">Request Feature</a>
   </p>
 </p>
+<div align= "center">
+
+  [*Team*](#Team) | [*Getting Started*](#Getting) | [*Education*](#education) | [*Experience*](#experience) | [*Interests*](#interests)
+
+</div>
 
 ## About The Project
 
