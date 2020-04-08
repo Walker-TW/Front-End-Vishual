@@ -2,7 +2,7 @@
   <h1 align="center">The Vishual Project</h3>
 
   <p align="center">
-    A single page web app music visualiser that responds to data returns by the Spotify API.
+    A single page web app music visualiser that dynamically creates animation based on data returned by the Spotify WEB API.
   </p>
 </p>
 <div align= "center">
