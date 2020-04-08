@@ -5,17 +5,13 @@
 
   <p align="center">
     A single page web app music visualiser that respondes to data returns by the Spotify API.
-    <br />
-    <a href="https://github.com/Walker-TW/Front-End-Vishual"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/Walker-TW/Front-End-Vishual">View Demo</a>
-    ·
-    <a href="https://github.com/Walker-TW/Front-End-Vishual/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Walker-TW/Front-End-Vishual/issues">Request Feature</a>
   </p>
 </p>
+<div align= "center">
+
+  [*Team*](#Team) | [*Getting Started*](#Getting) | [*Education*](#education) | [*Experience*](#experience) | [*License*](#license)
+
+</div>
 
 ## About The Project
 
@@ -32,7 +28,13 @@ A single page web app music visualiser that respondes to data returns by the Spo
 
 ## Getting Started
 
-Clone the repository along with the backend server [Back-End-Vishual](https://github.com/acmerlino1/Back-End-Vishual).
+Clone the repository along with the backend server [Back-End-Vishual](https://github.com/Walker-TW/Back-End-Vishual).
+
+```sh
+git clone https://github.com/Walker-TW/Front-End-Vishual
+
+git clone https://github.com/Walker-TW/Back-End-Vishual
+```
 
 Install npm.
 
@@ -50,4 +52,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Please also follow directions for running the back end server, found in the [Back-End-Vishual](https://github.com/acmerlino1/Back-End-Vishual) README.
 
+Make sure to run them in seperate terminal windows
+
 In the project directory, you can run: node authorizationcode/app.js
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
