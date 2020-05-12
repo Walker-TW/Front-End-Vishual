@@ -15,7 +15,7 @@
 
 ![product-screenshot](/public/images/Screentshot.png?raw=true)
 
-The project takes the song data of whatever is being played on a users Spotify account to create a visual that reacts based on user input. The visuals are dynamically created based upon data taken using Spotify's Web API on the song that has been chosen.
+The project takes the song data of whatever is being played on a users Spotify account to create a visual that reacts based on user input. The visuals are dynamically created based upon data taken using Spotify's Web API on the song that has been chosen. 
 
 The parameters used to render the visuals on screen include;
 
