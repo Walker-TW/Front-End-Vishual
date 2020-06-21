@@ -1,3 +1,14 @@
+<div align="center">
+
+[![MIT License][license-shield]][license-url]
+![Javascript][Javascript]
+![React][react]
+![CSS][cssCommits]
+![HTML commits][htmlCommits]
+![NodeJS][NodeJS]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+</div>
 <p align="center">
   <h1 align="center">The Vishual Project</h3>
 
@@ -78,3 +89,13 @@ For directions on running the back end server please visit that portion of the p
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/thomas-w-walker 
+[React]: https://img.shields.io/badge/React-blue.svg
+[Javascript]: https://img.shields.io/badge/JavaScript-yellow.svg
+[cssCommits]: https://img.shields.io/badge/CSS-red.svg
+[htmlCommits]: https://img.shields.io/badge/HTML-orange.svg
+[NodeJS]: https://img.shields.io/badge/Node.JS-darkgreen.svg
