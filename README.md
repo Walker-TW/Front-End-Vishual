@@ -1,68 +1,101 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+[![MIT License][license-shield]][license-url]
+![Javascript][Javascript]
+![React][react]
+![CSS][cssCommits]
+![HTML commits][htmlCommits]
+![NodeJS][NodeJS]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-In the project directory, you can run:
+</div>
+<p align="center">
+  <h1 align="center">The Vishual Project</h3>
 
-### `yarn start`
+  <p align="center">
+    A single page web app music visualiser that dynamically creates animation based on data returned by the Spotify WEB API.
+  </p>
+</p>
+<div align= "center">
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  [*About The Project*](#About-The-Project) | [*The Team*](#The-Team) | [*Getting Started*](#Getting-Started) | [*Running The Program*](#Running-The-Program) | [*Back End*](#The-Back-End) | [*License*](#license)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+</div>
 
-### `yarn test`
+## About The Project
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![product-screenshot](/public/images/Screentshot.png?raw=true)
 
-### `yarn build`
+The project takes the song data of whatever is being played on a users Spotify account to create a visual that reacts based on user input. The visuals are dynamically created based upon data taken using Spotify's Web API on the song that has been chosen. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The parameters used to render the visuals on screen include;
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Song Key - which chooses a colour palette
+- Danceability - which determines the number of circles on screen
+- Song Energy - which determines the speed of the circles
+- Valence (or positivity) - which creates a randomised seed of circle size
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## The Team
 
-### `yarn eject`
+- [Alicia Merlino](https://github.com/acmerlino1)
+- [Tom Walker](https://github.com/Walker-TW)
+- [Lucian Boatright](https://github.com/lucianboatright)
+- [Vish Mayer](https://github.com/Vish-Mayer)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting Started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository along with the backend server [Back-End-Vishual](https://github.com/Walker-TW/Back-End-Vishual).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+git clone https://github.com/Walker-TW/Front-End-Vishual
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+git clone https://github.com/Walker-TW/Back-End-Vishual
+```
 
-## Learn More
+2. Install NPM.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+$ npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Install NPM packages
 
-### Code Splitting
+```sh
+npm install
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Running the program
 
-### Analyzing the Bundle Size
+1. Run NPM start to begin the server.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```
+$ npm start
+```
 
-### Making a Progressive Web App
+2. Open your desired port (which will default to [http://localhost:3000](http://localhost:3000) ) to view it in the browser.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+3. Sign in to Spotify using their secure server and then play a song via your phone or desktop.
 
-### Advanced Configuration
+4. Enjoy!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## The Back End
 
-### Deployment
+WARNING!!!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+The project will not run without the Node.JS server running in another terminal window we would suggest running that directory first before running NPM start.
 
-### `yarn build` fails to minify
+For directions on running the back end server please visit that portion of the project found [here](https://github.com/Walker-TW/Back-End-Vishual).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/thomas-w-walker 
+[React]: https://img.shields.io/badge/React-blue.svg
+[Javascript]: https://img.shields.io/badge/JavaScript-yellow.svg
+[cssCommits]: https://img.shields.io/badge/CSS-red.svg
+[htmlCommits]: https://img.shields.io/badge/HTML-orange.svg
+[NodeJS]: https://img.shields.io/badge/Node.JS-darkgreen.svg
