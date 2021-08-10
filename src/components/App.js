@@ -1,188 +1,90 @@
-import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
-import "./App.css";
-import AudioFeatures from "./AudioFeatures";
-// import Visualizer from "./Visualizer";
-import UserFeatures from "./UserFeatures";
-import { BrowserRouter as Router } from "react-router-dom";
-
-// import PlayerController from './PlayerController'
-import Spotify from "spotify-web-api-js";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, OverlayTrigger } from "react-bootstrap";
-
-const spotifyWebApi = new Spotify();
+// import React from 'react';
+import React, { Component } from 'react'
+import './App.css';
+import { Header } from "./Header"
 
 class App extends Component {
-  constructor() {
-    super();
-    const params = this.getHashParams();
+  constructor(props) {
+    super(props);
     this.state = {
-      loggedIn: params.access_token !== undefined,
-      nowPlaying: {
-        name: "Not Checked",
-        image: "",
-        artist: "",
-        id: "",
-        progress: ""
-      },
-      oAuth: params.access_token
+      isLoginOpen: true,
+      isRegisterOpen: false
     };
-    if (params.access_token) {
-      spotifyWebApi.setAccessToken(params.access_token);
-    }
-    localStorage.setItem("spotify_access_token", params.access_token);
-    localStorage.setItem("user_id", params.access_token);
-
-    this.audioFeatures = React.createRef();
   }
-
-  componentDidMount() {
-    this.Interval = setInterval(() => this.getNowPlaying(), 5000);
-    this.getNowPlaying();
-  }
-  componentWillUnmount() {
-    clearInterval(this.Interval);
-  }
-
-  getHashParams() {
-    var hashParams = {};
-    var e,
-      r = /([^&;=]+)=?([^&;]*)/g,
-      q = window.location.hash.substring(1);
-    while ((e = r.exec(q))) {
-      hashParams[e[1]] = decodeURIComponent(e[2]);
-    }
-    return hashParams;
-  }
-  getNowPlaying() {
-    if (!this.state.loggedIn) {
-      return;
-    }
-    spotifyWebApi
-      .getMyCurrentPlaybackState()
-      .then(response => {
-        if (!response) {
-          return;
-        }
-        if (this.state.nowPlaying.id !== response.item.id) {
-          this.setState({
-            nowPlaying: {
-              name: response.item.name,
-              image: response.item.album.images[1].url,
-              artist: response.item.artists[0].name,
-              id: response.item.id,
-              progress: response.progress_ms
-            }
-          });
-          this.audioFeatures.current.onTrackUpdated(response.item.id);
-        }
-      })
-      .catch(err => {
-        if (err.status === 401) {
-          this.setState({
-            unauthorized: true
-          });
-        }
-      });
-  }
-  render() {
-    if (this.state.unauthorized) {
-      return (
-        <Router>
-          <Redirect to="/" />
-        </Router>
-      );
-    }
+  render () {
+    
 
     return (
       <div className="App">
-        {(() => {
-          if (this.state.loggedIn) {
-            return (
-            <div>
-              <div className="userwelcome">
-                  <UserFeatures
-                    ref={this.userFeatures}
-                    oAuth={this.state.oAuth}
-                  />
-                </div>
+        <Header/>
 
-              <div className="logout-btn">
-                <a href="https://accounts.spotify.com/en/logout ">
-                  <Button variant="outline-success" size="sm">
-                    Log out
-                  </Button>
-                </a>
-              </div>
-            </div>
-            );
-          } else {
-            return (
-              <div>
-                <div className="spotify">
-                  <div className="bar bar-dark"></div>
-                  <div className="bar bar-med"></div>
-                  <div className="bar bar-light"></div>
-                </div>
-                <h1>Please Login Using Spotify</h1>
-                <br></br>
-                <a href="http://localhost:8888/login">
-                  <Button variant="outline-success" size="lg">
-                    Login
-                  </Button>
-                </a>
-              </div>
-            );
-          }
-        })()}
-        {(() => {
-          if (this.state.loggedIn && this.state.nowPlaying.id) {
-            return (
-              <div className="currently-playing">
-                <div className="now-playing">
-                  <h2>Now Playing:</h2>
-                  <h5>
-                    {this.state.nowPlaying.name}
-                  </h5>
-                  <h5>
-                    {this.state.nowPlaying.artist}
-
-
-                  </h5>
-                </div>
-
-                <div className="nowplayingimage">
-                  <img
-                    alt="Album Art Work"
-                    src={this.state.nowPlaying.image}
-                    style={{ width: 200 }}
-                  />
-                </div>
-                
-
-                <div className="songinfo">
-                  <AudioFeatures
-                    id={this.state.nowPlaying.id}
-                    ref={this.audioFeatures}
-                    oAuth={this.state.oAuth}
-                  />
-                </div>
-              </div>
-            );
-          } else {
-            if (this.state.loggedIn) {
-              return (
-                <div className="no-playback">
-                  <h1>No Playback detected</h1>
-                </div>
-              );
-            }
-          }
-        })()}
       </div>
     );
+    // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
 }
 
 export default App;
+
+
+// import React, { useState } from 'react';
+// import './App.css';
+// import Person from './Person/Person';
+
+// const app = (props) => {
+//     const [ personsState, setPersonsState ] = useState({
+//       persons: [
+//         { name: "Fred", age: 30 },
+//         { name: "Jason", age: 15 },
+//         { name: "Micheal", age: 55 }
+//       ],
+//       // otherState: "Some other state"
+//     });
+
+//     // State slicking using two arguments on const [original, newstate(not required to use)]
+//     // now outside te perosnState is will carry over and not be lost onClick event
+//     // Hooks are all about 'useState' functions(line 6) imported instead of component
+//     // const [otherState, setOtherState] = useState('NEW STATEMENT');
+
+//     // console.log(personsState, otherState)
+
+//     const swithNameHandeler = (newName) => {
+//       // console.log('Was clicked');
+//       // DONT DO THIS!! this.state.persons.age = this.state.persons.age +=1
+//       setPersonsState({
+//         persons: [
+//           { name: newName, age: personsState.persons[0].age += 1},
+//           { name: "Jason", age: personsState.persons[1].age += 1 },
+//           { name: "Micheal", age: personsState.persons[2].age += 1}
+//         ]
+//       })
+//     }
+    
+//     return (
+//       <div className="App">
+//         <h1>Hi I am the react app</h1>
+//         <p>This is under teh main</p>
+//         <button onClick={swithNameHandeler("NEW onClick binder")} >Switch name</button>
+//         <Person 
+//           name={personsState.persons[0].name} 
+//           age={personsState.persons[0].age} />
+//         <Person 
+//           name={personsState.persons[1].name} 
+//           age={personsState.persons[1].age} />
+//         <Person 
+//           name={personsState.persons[2].name} 
+//           age={personsState.persons[2].age} 
+//           click={swithNameHandeler.bind(this, "Name of Click")}> With additional Click </Person>
+//         <Person name="James" age= '48' > Added content child: hobbie </Person>
+//         <Person name="Jeremy" age= '15'  />
+//       </div>
+//     );
+//     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
+
+  
+// }
+
+// export default app;
+
+
+
