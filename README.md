@@ -86,12 +86,6 @@ The project will not run without the Node.JS server running in another terminal 
 
 For directions on running the back end server please visit that portion of the project found [here](https://github.com/Walker-TW/Back-End-Vishual).
 
-## The Visualiser
-
-Image of app being run, and React components highlighted.
-
-![image](src/vishuliser_progect.png)
-
 
 ## License
 
